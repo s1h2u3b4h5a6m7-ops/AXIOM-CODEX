@@ -1,0 +1,9 @@
+# Obsidian per-machine / cache files (not meant to be shared)
+InvestorLens-Vault/.obsidian/workspace.json
+InvestorLens-Vault/.obsidian/workspace-mobile.json
+InvestorLens-Vault/.obsidian/cache
+InvestorLens-Vault/.trash/
+
+# OS cruft
+.DS_Store
+Thumbs.db
