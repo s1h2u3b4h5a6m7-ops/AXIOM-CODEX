@@ -1,1 +1,24 @@
+name: Extract Nifty 50 Data
 
+on:
+  push:
+    branches: [ claude/investorlens-vault-creation-k5m71f ]
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Extract ZIP
+        run: |
+          unzip -o Nifty_50_Complete_Data_Pack.zip -d ./
+          ls -la
+      
+      - name: Commit extracted files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Extract Nifty 50 data files" || true
+          git push
